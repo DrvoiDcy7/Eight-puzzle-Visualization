@@ -1,0 +1,131 @@
+\documentclass[10pt,conference]{IEEEtran}
+
+\ifCLASSINFOpdf
+	\usepackage[pdftex]{graphicx}
+	%\graphicspath{{./figs/}}
+	\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+	\usepackage[dvips]{graphicx}
+	%\graphicspath{{./figs/}}
+	\DeclareGraphicsExtensions{.eps}
+\fi
+
+\usepackage{listings}
+\lstset{breaklines=true}
+\lstset{extendedchars=false}
+\usepackage[cmex10]{amsmath}
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage{xcolor}
+\usepackage[lined,ruled]{algorithm2e}
+
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows}
+
+\usepackage[]{algorithm2e}
+
+\newtheorem{property}{Property}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+
+\makeatletter
+\pgfdeclareshape{datastore}{
+\inheritsavedanchors[from=rectangle]
+\inheritanchorborder[from=rectangle]
+\inheritanchor[from=rectangle]{center}
+\inheritanchor[from=rectangle]{base}
+\inheritanchor[from=rectangle]{north}
+\inheritanchor[from=rectangle]{north east}
+\inheritanchor[from=rectangle]{east}
+\inheritanchor[from=rectangle]{south east}
+\inheritanchor[from=rectangle]{south}
+\inheritanchor[from=rectangle]{south west}
+\inheritanchor[from=rectangle]{west}
+\inheritanchor[from=rectangle]{north west}
+\backgroundpath{
+    %  store lower right in xa/ya and upper right in xb/yb
+\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+ }
+}
+\makeatother
+
+\newcommand{\riham}[1]{{\color{red}{#1}}}
+\newcommand{\james}[1]{{\color{blue}{#1}}}
+
+
+\begin{document}
+
+\title{Implementation and Visualization of A* Algorithm Based on Web Game "Eight-figure puzzles"}
+\author{
+\IEEEauthorblockN{Chengyuan Deng}
+\IEEEauthorblockA{CS Department, Rutgers University\\ Piscataway, NJ, USA\\
+Email: charren.d@rutgers.edu}
+\and
+\IEEEauthorblockN{Sagar Jain}
+\IEEEauthorblockA{CS Department, Rutgers University\\Piscataway, NJ, USA\\
+Email: sj735@rutgers.edu}
+\and
+\IEEEauthorblockN{Gauthamram Prabaharan}
+\IEEEauthorblockA{CS Department, Rutgers University\\Piscataway, NJ, USA\\
+Email: gauthamram.prabaharan@rutgers.edu}
+}
+
+\maketitle
+\begin{abstract}
+\textnormal{
+A* algorithm, known as a heuristic algorithm with lower time and memory complexity comparing with other shortest path searching algorithms(e.g. Dijkstra's algorithm), enjoys widespread use in real time strategy games due to its performance and accuracy. In this project, A* algorithm will be implemented in the game "eight-figure puzzles", which is a strategy game in 2D grid, and the process of implementation will be visualized on a web page. Unsuspiciously, this project will be fun since the form of implementing an advanced algorithm by games is attracting and novel. The visualization of the process is helpful for students to grasp a better understanding on A* algorithm while having fun playing the games!
+}
+\end{abstract}
+%\onecolumn \maketitle \normalsize \vfill
+
+\IEEEpeerreviewmaketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Project Description}\label{sec:1. Project Description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textnormal{
+As mentioned in the abstract, the core component of this project is A* algorithm, based on which a real time strategy game called "eight-figure puzzles" will be developed and deployed online with HTML,CSS and JavaScript. The users can try to solve the game themselves, but meanwhile a visualization of solving the "eight-figure puzzles" game using A* algorithm will be provided on the web page to show the implementing process of A*. The type of this project is similar to type a and type b among those in posted sakai announcement, but we work more than what those types require since we actually develop a web application, which is more useful than just a sample or an animation. We are confident to complete this project by the deadline given the strong background of our group mates. The idea of the whole project is definitely novel as it integrates learning algorithm and playing games. The main stumbling block we can see temporarily is the web application for games. It's more complicated than just developing a web site or just developing a game. The timeline for this project will fit in stage2,stage3,stage4 respectively, we will complete the basic implementation of A* algorithm by stage2, the visualization and web application by stage3, and testing of the web application with optimization by stage4. We will reach the major milestone of this project by concentrating on the algorithm and studying advanced JavaScript for the web application.
+}
+
+The project has four stages: Gathering, Design, Infrastructure Implementation, and User Interface.
+
+%\subsection{Stage1 - The Requirement Gathering Stage. } \label{sec:1	Requirement Gathering Stage. }
+%\input{Stage1.tex}
+\subsection{Stage1 - The Requirement Gathering Stage. }\label{sec:1 Requirement Gathering Stage. }
+%%%%%%%
+\input{Stage1.tex}
+
+
+\subsection{Stage2 - The Design Stage. }\label{sec: 2:The Design Stage.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Stage2.tex}
+
+%\subsection{Stage3 - The Implementation Stage. }\label{sec: 3 The Implementation Stage.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{Stage3.tex}
+
+%\subsection{Stage4 -	User Interface. }\label{sec: 4. User Interface.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{Stage4.tex}
+
+%\section{Project Highlights.}\label{sec:7. Project Highlights.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{Highlights.tex}
+
+
+\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,bib_queyroi_abello2013}
+%\bibliography{bib_queyroi_abello2013}
+
+\end{document}
+
+
