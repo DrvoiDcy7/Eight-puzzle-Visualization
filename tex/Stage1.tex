@@ -1,0 +1,93 @@
+\textnormal{
+This project is designed with a realistic idea that includes potential real world scenarios,
+with a description of the different user types along with their interactions with the system
+as well as the system feedback to them, according to their information needs.
+This stage also requires the specification of the different constraints and restrictions
+that need to be enforced depending on the different types of user.
+The deliverables for stage1 are as follows:
+}
+
+
+\begin{itemize}
+\item{The general system description: }
+The system of our project is composed of three parts: web application, A* algorithm and "eight-figure puzzles" game. Basically, relationship of the three parts is: The game is deployed on the web application and users can try to solve it; A* algorithm is introduced to solve the game; The web application will show the process of implementing A* algorithm to solve the game.
+\item{The three types of users (grouped by their data access/update rights): }
+Three types of user are considered in this project, the details are as follows:
+
+    \begin{itemize}
+    \item{Type1 ordinary game player: }
+	For ordinary game player, they will certainly have access to the game and enjoy it. They may also have rights to see the result. But they are not allowed to view the process that the game is solved, nor are they qualified to change to visualization mode. 
+    \item{Type2 advanced game player: }
+	Once a user turns to an advanced game player, he certainly maintains all the right as ordinary game player, what's more, he can control the visualization mode and speed.
+	\item{Type3 administrator: }
+	Indubitably the administrator has the highest authority on the system. He can control and change everything.
+    \end{itemize}
+    
+\item{The user's interaction modes: }
+    \begin{itemize}
+    \item{Game playing web page:}
+    Left and right distributed, the left part will show the 2D grid of "eight-figure" puzzles, the right part contains a brief introduction of the initial status and the goal status.
+    \item{visualization web page:}
+    Left and right distributed, the left part is a canvas where the steps of A* algorithm will be shown, the right part includes a control bar of the visualization and a message bar showing the distance values of A* algorithm.
+    \end{itemize}
+\item{The real world scenario1: }
+Game player update operations on the game
+
+	\begin{itemize}
+	\item{System Data Input for Scenario1: }
+	An array of the eight numbers in each block by the designed order.
+	\item{Input Data Types for Scenario1: }
+	3*3 2D graph with 9 blocks, 8 of them are labeled with the designated number, the rest is blank.
+	\item{System Data Output for Scenario1: }
+	An array of the eight numbers in each block by the designed order after one or several steps in A* algorithm.
+	\item{Output Data Types for Scenario1: }
+	3*3 2D graph with 9 blocks, 8 of them are labeled with the number after updated, the rest is blank.
+	\end{itemize}
+
+\item{The real world scenario2: }
+Please insert the real world scenarios in here, as follows.
+
+	\begin{itemize}
+	\item{System Data Input for Scenario2: }
+	Click the button "step","run" and "pause". Change the frequency of updating steps by keyboard input.
+	\item{Input Data Types for Scenario2: }
+	Keyboard control, mouse control
+	\item{System Data Output for Scenario2: }
+	 Button "step" will show every searching step of A* algorithm and be paused automatically. Button "run" allows the algorithm continuing running and showing the results after clicking.  Input the intervals of updating steps to control the speed of visualization.
+	\item{Output Data Types for Scenario2: }
+	A spanning tree indicating the searching process of A* algorithm.
+	\end{itemize}
+
+\item{Project Time line}
+   \begin{itemize}
+	\item{Stage1 (Oct.27): }
+	Requirement gathering, plan and division of work, knowledge of A* algorithm.
+	\item{Stage2 (Nov.10): }
+	System flow diagram containing a graphical representation and textual descriptions of the corresponding data transformations, high level pseudo code of A* algorithm, time and space complexity, knowledge of JavaScript on web application.
+	\item{Stage3 (Nov.24): }
+	Implementation of A* algorithm, web game application.
+	\item{Stage4 (Dec.8): }
+	Integrating, testing and optimization of the web application, writing the report, preparing presentation and codes.
+	\end{itemize}
+\item{Division of Labor: }
+    \begin{itemize}
+    
+	\item{implementation of A*: }
+	Sagar Jain, Gauthamram Prabaharan
+	\item{web application: }
+	Chengyuan Deng
+	\item{deploy the game on website : }
+	Chengyuan Deng
+    \item{visualization: }
+    Chengyuan Deng
+    \item{testing: }
+    Sagar Jain
+    \item{evaluation: }
+    Gauthamram Prabaharan
+    \item{project report: }
+    Chengyuan Deng
+    \item{power point presentation: }
+    Sagar Jain, Gauthamram Prabaharan
+	\end{itemize}
+\end{itemize}
+
