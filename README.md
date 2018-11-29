@@ -1,2 +1,7 @@
 # Eight-puzzle-Visualization
-Data Structure&amp;Algorithms, course project, A* algorithm, 2018
+```
+Course project, CS512 Introduction to Data Structure & Algorithms
+Department of Computer Science, Rutgers University
+Chengyuan Deng, Sagar Jain, Parabaharan Gauthamram 
+Date: Dec, 2018
+```
